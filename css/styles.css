@@ -1,0 +1,28 @@
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+
+ul,ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;    
+    list-style: none;
+}
+
+.gallery {
+    width: 1128px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
+}
