@@ -95,7 +95,7 @@ galleryEl.addEventListener('click', (event) => {
   const imgLink = event.target.dataset.source;
   const description = event.target.alt;
 
-   const instance = window.basicLightbox.create(`
+   const instance = basicLightbox.create(`
     <img src="${imgLink}" alt="${description}">
   `);
 
