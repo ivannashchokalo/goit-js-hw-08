@@ -87,7 +87,20 @@ function imgsTemplate(arr) {
 const markup = imgsTemplate(images);
 galleryEl.innerHTML = markup;
 
+
 galleryEl.addEventListener('click', (event) => {
-    event.preventDefault();
-    console.log(event.target.dataset.source);
+  event.preventDefault();
+  if (event.target.nodeName !== 'IMG') return;
+
+  const imgLink = event.target.dataset.source;
+  const description = event.target.alt;
+
+   const instance = basicLightbox.create(`
+    <img src="${imgLink}" alt="${description}">
+  `);
+
+  instance.show();
+
+  console.log(event.target.dataset.source);
 })
+
